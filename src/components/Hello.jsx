@@ -1,13 +1,12 @@
 import logo from '../logo.svg';
 
 // function Hello() {
-
 //   return (
 //     <>
 //       <h1>Hello world!</h1>
 //       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio est sequi esse veritatis laborum dignissimos, assumenda similique architecto, illum fugit expedita enim amet. Autem totam doloribus blanditiis sit incidunt illo.</p>
 //     </>
-//   )
+//   );
 // }
 
 function Head(props) {
@@ -34,3 +33,8 @@ function Head(props) {
 }
 
 export default Head
+
+
+// tsx and jsx
+// Library => Tool that provides specific functionality
+// Framework => Set of tools and guidelines for building apps
