@@ -1,8 +1,8 @@
 function Profile(props) {
   return (
     <>
-      <h1 className="m-3">User Profile</h1>
       <div className="container p-3">
+        <h1 className="m-3">User Profile</h1>
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">Profile Card</h5>
