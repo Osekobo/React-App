@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import StudentCard from "./components/StudentCard";
 import Counter from "./components/Counter";
+import Color from "./components/ColorPicker";
 
 function App() {
   const students = [
@@ -16,6 +17,7 @@ function App() {
         <StudentCard key={student.id} name={student.name} course={student.course}
           score={student.score} ></StudentCard>
       ))}
+      <Color></Color>
       <Counter></Counter>
     </div>
   )
