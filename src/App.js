@@ -2,6 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import StudentCard from "./components/StudentCard";
+import OnlineStatus from "./components/OnlineStatus";
 import Counter from "./components/Counter";
 import Color from "./components/ColorPicker";
 
@@ -18,10 +19,12 @@ function App() {
           score={student.score} ></StudentCard>
       ))}
       <Color></Color>
+      < OnlineStatus></OnlineStatus>
       <Counter></Counter>
     </div>
   )
-}
+};
+
 export default App;
 
 
