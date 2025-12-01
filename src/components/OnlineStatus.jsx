@@ -2,16 +2,13 @@ import { useState, useEffect } from "react";
 
 function OnlineStatus() {
 
-  // initial value = navigator.onLine
   const [isOnline, setIsOnline] = useState(navigator.onLine);
 
   useEffect(() => {
-    // when internet comes back
     function handleOnline() {
       setIsOnline(true);
     }
 
-    // when internet goes off
     function handleOffline() {
       setIsOnline(false);
     }
@@ -19,7 +16,6 @@ function OnlineStatus() {
     window.addEventListener("online", handleOnline);
     window.addEventListener("offline", handleOffline);
 
-    // cleanup when component unmounts
     return () => {
       window.removeEventListener("online", handleOnline);
       window.removeEventListener("offline", handleOffline);

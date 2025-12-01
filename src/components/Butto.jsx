@@ -1,4 +1,4 @@
-function Button(props) {
+function Butto(props) {
   let num = -1;
   const great = () => {
     num++;               
@@ -11,5 +11,5 @@ function Button(props) {
   );
 }
 
-export default Button;
+export default Butto;
 
