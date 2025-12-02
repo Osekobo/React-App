@@ -14,6 +14,8 @@ import OnlineStatus from "./components/OnlineStatus";
 import Counter from "./components/Counter";
 import Color from "./components/ColorPicker";
 import MyForm from './components/form';
+import Posts from './components/Posts';
+import Products from './components/Products';
 
 function App() {
   const students = [
@@ -54,6 +56,8 @@ function App() {
       <Counter></Counter>
       <Navbar></Navbar>
       <MyForm></MyForm>
+      <Products></Products>
+      <Posts></Posts>
     </div>
   );
 }
