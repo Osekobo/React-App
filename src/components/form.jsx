@@ -10,14 +10,12 @@ function MyForm() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    // VALIDATION — runs ONLY on submit
-
     if (name.trim().length < 3 || name.trim().length > 50) {
       alert("Name must be between 3 and 50 characters.");
       return;
     }
 
-    const phoneRegex = /^\+254\d{9}$/; // Correct regex
+    const phoneRegex = /^\+254\d{9}$/; 
     if (!phoneRegex.test(phone)) {
       alert("Phone must be in the format +254XXXXXXXXX (9 digits after +254).");
       return;
@@ -72,7 +70,3 @@ function MyForm() {
 }
 export default MyForm;
 
-
-
-
-// Ensure that the name has min of 3 and a max of 50 characters, ensure phone input field contains the right phone number structure, ensure all the input fields expect the check box are not empty 
