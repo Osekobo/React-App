@@ -8,8 +8,8 @@ function Profile(props) {
             <h5 className="card-title">Profile Card</h5>
             <h6 className="card-subtitle mb-2 text-body-secondary">Card Info:</h6>
             <h3>Name: {props.name}</h3>
-            <h4>Age: {props.age}</h4>
-            <h4>Profession: {props.profession}</h4>
+            <h3>Age: {props.age}</h3>
+            <h3>Profession: {props.profession}</h3>
           </div>
         </div>
       </div>

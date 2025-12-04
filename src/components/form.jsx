@@ -6,32 +6,26 @@ function MyForm() {
   const [phone, setPhone] = useState("")
   const [email, setEmail] = useState("")
   const [isAdult, setisAdult] = useState("false")
-
   function handleSubmit(e) {
     e.preventDefault();
-
     if (name.trim().length < 3 || name.trim().length > 50) {
       alert("Name must be between 3 and 50 characters.");
       return;
     }
-
-    const phoneRegex = /^\+254\d{9}$/; 
+    const phoneRegex = /^\+254\d{9}$/;
     if (!phoneRegex.test(phone)) {
       alert("Phone must be in the format +254XXXXXXXXX (9 digits after +254).");
       return;
     }
-
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       alert("Please enter a valid email address.");
       return;
     }
-
     if (!name || !phone || !email) {
       alert("All input fields except the checkbox must be filled.");
       return;
     }
-
     alert("Form submitted successfully!");
     console.log("Form data:", { name, phone, email, isAdult });
   }
@@ -60,13 +54,14 @@ function MyForm() {
               <label>Are you an adult?</label>
               <input type="checkbox" checked={isAdult} onChange={(e) => setisAdult(e.target.checked)} />
             </div>
-            <h1>Adult status: {isAdult ? "I ama na adult" : "I am not an adult"}</h1>
-            <input type="submit" />
+            <h1>Adult Status: {isAdult ? "I am an adult!" : "I am not an adult!"}</h1>
+            <input type="Submit" />
           </div>
         </form>
       </div>
     </>
   )
 }
+
 export default MyForm;
 

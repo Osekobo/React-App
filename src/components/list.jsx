@@ -2,9 +2,11 @@ function Lists() {
   const fruits = ['Apples', 'Grapes', 'Banana', 'passion']
   return (
     <>
-      <ul>
-        {fruits.map((fruit) => <li>{fruit}</li>)}
-      </ul>
+      <div className="container mt-5">
+        <ul>
+          {fruits.map((fruit) => <li>{fruit}</li>)}
+        </ul>
+      </div>
     </>
   )
 };

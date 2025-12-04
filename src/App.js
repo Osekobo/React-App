@@ -3,7 +3,6 @@ import Button from "./components/Button"
 import Lists from "./components/list"
 import Butto from "./components/Butto"
 import Table from "./components/StudentTable"
-// import Head from "./components/Hello"
 import Profile from "./components/Profilecard"
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -23,6 +22,7 @@ function App() {
     { id: 2, name: "Mary", course: "Python", score: 92 },
     { id: 3, name: "Kevin", course: "JavaScript", score: 78 }
   ];
+
   return (
     <div className="App">
       <header className="App-header">
@@ -42,7 +42,6 @@ function App() {
       <Butto title="Click Me!"></Butto>
       <Lists></Lists>
       <Table></Table>
-      {/* <Head></Head> */}
       <Button title="Login" ></Button>
       <Button title="SignUp"></Button>
       <Profile name="Collins Oseko" age="20" profession="Software Developer"></Profile>
@@ -51,7 +50,6 @@ function App() {
           score={student.score} ></StudentCard>
       ))}
       <Color></Color>
-      
       < OnlineStatus></OnlineStatus>
       <Counter></Counter>
       <Navbar></Navbar>

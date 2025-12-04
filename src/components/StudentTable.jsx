@@ -2,8 +2,8 @@ function Table(props) {
   const student_details = [{ "id": 1, "firstname": "John", "lastname": "Doe", "age": 30 }, { "id": 2, "firstname": "Ivy", "lastname": "Lily", "age": 60 }, { "id": 3, "firstname": "Peter", "lastname": "Washington", "age": 90 }];
   return (
     <>
-      <div className="container">
-        <table class="table">
+      <div className="container mt-5">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">ID</th>

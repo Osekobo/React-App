@@ -1,12 +1,14 @@
 function Butto(props) {
   let num = -1;
   const great = () => {
-    num++;               
+    num++;
     console.log(num);
   };
   return (
     <>
-      <button onClick={great}>{props.title}</button>
+      <div className="container m-5">
+        <button onClick={great}>{props.title}</button>
+      </div>
     </>
   );
 }

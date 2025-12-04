@@ -18,21 +18,31 @@ function Products() {
     return <div>Loading posts...</div>;
   }
 
-
   return (
     <div className="container mt-5">
       <h2>Products</h2>
-      {products.map((prod) => (
-        <div key={prod.id}>
-          <h3>{prod.name}</h3>
-          <h3>{prod.buying_price}</h3>
-          <h3>{prod.selling_price}</h3>
-          <hr />
-        </div>
-      ))}
+      <table className="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Buying Price</th>
+            <th>Selling Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {products.map((prod) => (
+            <tr>
+              <th scope="row">{prod.id}</th>
+              <th>{prod.name}</th>
+              <th>{prod.buying_price}</th>
+              <th>{prod.selling_price}</th>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   )
-
 }
 
 export default Products;
