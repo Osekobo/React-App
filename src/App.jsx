@@ -1,11 +1,11 @@
 import Header from "./components/Header";
-import ItemCard from "./components/Itemcard";
+import Itemcard from "./components/ItemCard";
 
 export default function App() {
   return (
     <div>
       <Header />
-      <ItemCard />
+      <Itemcard name="Rodento" price="10,000" number="5" />
     </div>
   );
 }
