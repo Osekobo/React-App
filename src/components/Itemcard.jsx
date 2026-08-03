@@ -1,9 +1,21 @@
-export default function ItemCard({ name, price, number }) {
+import { useState } from "react";
+
+export default function Itemcard() {
+  const [count, setCount] = useState(0);
+  function handleAdd() {
+    setCount(count + 1);
+  }
+  function handleMinus() {
+    setCount(count - 1);
+  }
   return (
     <div>
-      <h1>Hello, {name}!</h1>
-      <h1>You have bought goods worth Ksh{price}</h1>
-      <h1>And you are number {number} in line</h1>
+      <h1>Count:{count}</h1>
+      <button onClick={handleAdd}>Click Me +</button>
+      <br />
+      <br />
+      <button onClick={handleMinus}>Click Me -</button>
     </div>
   );
 }
+
