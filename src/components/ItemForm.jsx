@@ -5,8 +5,8 @@ export default function ItemForm() {
   const [price, setPrice] = useState("");
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(name);
-    console.log(price);
+    console.log("Name",name);
+    console.log("Price",price);
   }
   return (
     <div>
@@ -32,8 +32,6 @@ export default function ItemForm() {
         <br />
         <button>Submit</button>
       </form>
-      <h1>You have entered {name}</h1>
-      <h1>The price is {price}</h1>
     </div>
   );
 }
