@@ -1,27 +1,18 @@
 import { useState } from "react";
 
-import Header from "./components/Header";
-import ItemCard from "./components/ItemCard";
-import ItemForm from "./components/ItemForm";
-
 export default function App() {
   const [items, setItems] = useState([
-    { id: 1, name: "Laptop", price: 65000 },
-    { id: 2, name: "Phone", price: 40000 },
-    { id: 3, name: "Computer", price: 50000 },
-    { id: 4, name: "Television", price: 20000 },
+    { id: 1, name: "Laptop", price: 50000 },
+    { id: 2, name: "Television", price: 80000 },
+    { id: 3, name: "Computer", price: 90000 },
   ]);
-
   function handleDelete(id) {
     const updatedItems = items.filter((item) => item.id !== id);
     setItems(updatedItems);
   }
-
   return (
     <div>
-      <Header />
-      <ItemForm />
-      <h1>My Products Table</h1>
+      <h1>Home Page</h1>
       <table>
         <thead>
           <tr>
