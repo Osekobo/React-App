@@ -5,8 +5,8 @@ export default function ItemForm() {
   const [price, setPrice] = useState("");
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("Name",name);
-    console.log("Price",price);
+    console.log("Name", name);
+    console.log("Price", price);
   }
   return (
     <div>
