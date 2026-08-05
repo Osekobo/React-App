@@ -1,13 +1,10 @@
 import { useState } from "react";
 
-export default function ItemCard({ id,name, price,onDelete }) {
+export default function ItemCard() {
   const [count, setCount] = useState(0);
   return (
     <div>
-      <h2>Name: {name}</h2>
-      <h2>Price: {price}</h2>
-      <h1>Count:{count}</h1>
-
+      <h1>Number: {count}</h1>
       <button onClick={() => setCount(count + 1)}>Add</button>
       <br />
       <br />
@@ -25,7 +22,6 @@ export default function ItemCard({ id,name, price,onDelete }) {
       <button onClick={() => setCount(0)}>Reset</button>
       <br />
       <br />
-      <button onClick={() => onDelete(id)}>Delete</button>
     </div>
   );
 }
