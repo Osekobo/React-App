@@ -4,7 +4,8 @@ export default function ItemCard() {
   const [count, setCount] = useState(0);
   return (
     <div>
-      <h1>Number: {count}</h1>
+      <h1>Item Card</h1>
+      <h1>Count: {count}</h1>
       <button onClick={() => setCount(count + 1)}>Add</button>
       <br />
       <br />
@@ -20,8 +21,6 @@ export default function ItemCard() {
       <br />
       <br />
       <button onClick={() => setCount(0)}>Reset</button>
-      <br />
-      <br />
     </div>
   );
 }
