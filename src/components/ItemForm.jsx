@@ -2,9 +2,9 @@ import { useState } from "react";
 
 export default function ItemForm() {
   const [items, setItems] = useState([
-    { id: 1, name: "Laptop", price: 50000 },
-    { id: 2, name: "Television", price: 70000 },
-    { id: 3, name: "Phone", price: 60000 },
+    { id: 1, name: "Laptop", price: 70000 },
+    { id: 2, name: "Television", price: 80000 },
+    { id: 3, name: "Phone", price: 90000 },
   ]);
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -22,10 +22,11 @@ export default function ItemForm() {
   return (
     <div>
       <h1>Item Form</h1>
+      {/* <form onSubmit={handleForm}> */}
       <label>Name: </label>
       <input
         type="text"
-        placeholder="Enter name"
+        placeholder="Enter Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
@@ -41,7 +42,8 @@ export default function ItemForm() {
       <br />
       <br />
       <button onClick={handleSubmit}>Submit</button>
-      <h1>Products Table</h1>
+      {/* </form>  */}
+      <h1>Table</h1>
       <table>
         <thead>
           <tr>
