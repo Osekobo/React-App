@@ -1,23 +1,43 @@
-import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+// import  {Item} from "../types/item"
 
 export default function Dashboard() {
+  const [items, setItems] = useState([]);
+
   useEffect(() => {
     async function getItems() {
-      try {
-        const response = await axios.get("http://127.0.0.1:8000/items");
-        console.log("Axios:", response.data);
-      } catch (error) {
-        console.error(error);
-      }
+      const response = await fetch("http://127.0.0.1:8000/items");
+      const data = await response.json();
+      setItems(data);
     }
-
     getItems();
-  }, []);
-
+  }, []); // dependency array
+  // useEffect(()=>{getItems(){}getitems()})
   return (
     <div>
-      <h1>Dashboard</h1>
+      <h1>Item Table</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>PRICE</th>
+            <th>EDIT</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items.map((item) => (
+            <tr key={item.id}>
+              <td>{item.id}</td>
+              <td>{item.name}</td>
+              <td>{item.price}</td>
+              <td>
+                <button>Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
