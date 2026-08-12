@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 
 export default function Dashboard() {
   const [items, setItems] = useState([]);
-
+  function handleDelete(id) {
+    console.log("Delete item:",id)
+  }
   useEffect(() => {
     async function getItems() {
       const response = await fetch("http://127.0.0.1:8000/items");
@@ -32,7 +34,7 @@ export default function Dashboard() {
               <td>{item.name}</td>
               <td>{item.price}</td>
               <td>
-                <button>Delete</button>
+                <button onClick={() => handleDelete(item.id)}>Delete</button>
               </td>
             </tr>
           ))}
