@@ -1,0 +1,8 @@
+export default function About() {
+  return (
+    <div>
+      <h1>About Us Page</h1>
+      <h1>About Us Page2</h1>
+    </div>
+  );
+}

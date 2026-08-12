@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -13,13 +15,16 @@ export default function Login() {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify(userData),
       });
       const data = await response.json();
       console.log("Backend response:", data);
       if (!response.ok) {
-        console.log("Login failed");
+        alert("Invalid email or data");
+        return;
       }
+      navigate("/home");
       // console.log("Login successful");
       setEmail("");
       setPassword("");

@@ -33,7 +33,6 @@ export default function ItemForm() {
   return (
     <div className="min-h-screen bg-gray-100 px-4 py-8 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
-
         {/* Page heading */}
         <h1 className="mb-6 text-2xl font-bold text-gray-900 sm:text-3xl">
           Item Management
@@ -100,9 +99,7 @@ export default function ItemForm() {
         {/* Table Card */}
         <div className="rounded-2xl bg-white p-4 shadow-md sm:p-6">
           <div className="mb-5 flex items-center justify-between">
-            <h2 className="text-xl font-semibold text-gray-800">
-              Items
-            </h2>
+            <h2 className="text-xl font-semibold text-gray-800">Items</h2>
 
             <span className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600">
               {items.length} items
@@ -111,7 +108,7 @@ export default function ItemForm() {
 
           {/* Responsive table */}
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[600px] text-left">
+            <table className="w-full min-w-150 text-left">
               <thead>
                 <tr className="border-b border-gray-200 bg-gray-50">
                   <th className="px-4 py-3 text-sm font-semibold text-gray-700">
@@ -138,9 +135,7 @@ export default function ItemForm() {
                     key={item.id}
                     className="border-b border-gray-100 transition hover:bg-gray-50"
                   >
-                    <td className="px-4 py-4 text-gray-600">
-                      {item.id}
-                    </td>
+                    <td className="px-4 py-4 text-gray-600">{item.id}</td>
 
                     <td className="px-4 py-4 font-medium text-gray-900">
                       {item.name}
@@ -164,7 +159,6 @@ export default function ItemForm() {
             </table>
           </div>
         </div>
-
       </div>
     </div>
   );

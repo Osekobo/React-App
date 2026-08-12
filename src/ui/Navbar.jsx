@@ -12,22 +12,22 @@ export default function Navbar() {
           <h1 className="text-xl font-bold sm:text-2xl">My App</h1>
           <ul className="hidden items-center gap-6 md:flex lg:gap-8">
             <li>
-              <a href="#" className=" hover:text-blue-400">
+              <a href="home" className=" hover:text-blue-400">
                 HOME
               </a>
             </li>
             <li>
-              <a href="#" className=" hover:text-blue-400">
+              <a href="product" className=" hover:text-blue-400">
                 PRODUCTS
               </a>
             </li>
             <li>
-              <a href="#" className=" hover:text-blue-400">
+              <a href="about" className=" hover:text-blue-400">
                 ABOUT US
               </a>
             </li>
             <li>
-              <a href="#" className=" hover:text-blue-400">
+              <a href="contact" className=" hover:text-blue-400">
                 CONTACT US
               </a>
             </li>
@@ -51,7 +51,7 @@ export default function Navbar() {
           <ul className="space-y-2 pb-4 md:hidden">
             <li>
               <a
-                href="#"
+                href="home"
                 className="block rounded-md px-3 py-2 hover:bg-gray-800"
               >
                 HOME
@@ -59,7 +59,7 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="#"
+                href="product"
                 className="block rounded-md px-3 py-2 hover:bg-gray-800"
               >
                 PRODUCTS
@@ -67,7 +67,7 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="#"
+                href="about"
                 className="block rounded-md px-3 py-2 hover:bg-gray-800"
               >
                 ABOUT US
@@ -75,7 +75,7 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="#"
+                href="contact"
                 className="block rounded-md px-3 py-2 hover:bg-gray-800"
               >
                 CONTACT US
