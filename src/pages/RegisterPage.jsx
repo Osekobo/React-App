@@ -5,15 +5,35 @@ export default function Register() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log(name);
-    console.log(phone);
-    console.log(email);
-    setName("");
-    setPhone("");
-    setEmail("");
-    setPassword("");
+    const userData = {
+      name: name,
+      phone: phone,
+      email: email,
+      password: password,
+    };
+    try {
+      const response = await fetch("http://127.0.0.1:8000/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
+      const data = await response.json();
+      console.log("Backend response:", data);
+      if (!response.ok) {
+        console.log("Registration failed");
+      }
+      // console.log("Registration successful");
+      setName("");
+      setPhone("");
+      setEmail("");
+      setPassword("");
+    } catch (error) {
+      console.error("Error:", error);
+    }
   }
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100 px-4 py-8">
