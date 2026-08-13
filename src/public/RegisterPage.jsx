@@ -116,6 +116,15 @@ export default function Register() {
             Register
           </button>
         </form>
+        <p className="mt-6 text-center text-sm text-gray-500">
+          Already have an account?{" "}
+          <a
+            href="login"
+            className="font-medium text-blue-600 hover:text-blue-700"
+          >
+            Login
+          </a>
+        </p>
       </div>
     </div>
   );

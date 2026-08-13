@@ -1,9 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+
   function handleLogout() {
-    console.log("Logging out...");
+    localStorage.removeItem("token");
+    navigate("/login");
+    // console.log("Logging out...");
   }
   return (
     <nav className="bg-gray-900 text-white shadow-lg">
@@ -12,23 +17,18 @@ export default function Navbar() {
           <h1 className="text-xl font-bold sm:text-2xl">My App</h1>
           <ul className="hidden items-center gap-6 md:flex lg:gap-8">
             <li>
-              <a href="home" className=" hover:text-blue-400">
-                HOME
+              <a href="apply" className=" hover:text-blue-400">
+                APPLY
               </a>
             </li>
             <li>
-              <a href="product" className=" hover:text-blue-400">
-                PRODUCTS
+              <a href="application" className=" hover:text-blue-400">
+                APPLICATION
               </a>
             </li>
             <li>
-              <a href="about" className=" hover:text-blue-400">
-                ABOUT US
-              </a>
-            </li>
-            <li>
-              <a href="contact" className=" hover:text-blue-400">
-                CONTACT US
+              <a href="profile" className=" hover:text-blue-400">
+                PROFILE
               </a>
             </li>
             <li>
@@ -51,34 +51,26 @@ export default function Navbar() {
           <ul className="space-y-2 pb-4 md:hidden">
             <li>
               <a
-                href="home"
+                href="apply"
                 className="block rounded-md px-3 py-2 hover:bg-gray-800"
               >
-                HOME
+                APPLY
               </a>
             </li>
             <li>
               <a
-                href="product"
+                href="application"
                 className="block rounded-md px-3 py-2 hover:bg-gray-800"
               >
-                PRODUCTS
+                APPLICATION
               </a>
             </li>
             <li>
               <a
-                href="about"
+                href="profile"
                 className="block rounded-md px-3 py-2 hover:bg-gray-800"
               >
-                ABOUT US
-              </a>
-            </li>
-            <li>
-              <a
-                href="contact"
-                className="block rounded-md px-3 py-2 hover:bg-gray-800"
-              >
-                CONTACT US
+                PROFILE
               </a>
             </li>
             <li>

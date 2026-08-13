@@ -24,7 +24,7 @@ export default function Login() {
         alert("Invalid email or data");
         return;
       }
-      navigate("/home");
+      navigate("/dashboard");
       // console.log("Login successful");
       setEmail("");
       setPassword("");
@@ -115,7 +115,7 @@ export default function Login() {
         {/* Register link */}
         <p className="mt-6 text-center text-sm text-gray-500">
           Don't have an account?{" "}
-          <a href="#" className="font-medium text-blue-600 hover:text-blue-700">
+          <a href="register" className="font-medium text-blue-600 hover:text-blue-700">
             Register
           </a>
         </p>
