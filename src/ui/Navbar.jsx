@@ -14,7 +14,9 @@ export default function Navbar() {
     <nav className="bg-gray-900 text-white shadow-lg">
       <div className="mx-auto  max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <h1 className="text-xl font-bold sm:text-2xl">My App</h1>
+          <h1 className="text-xl font-bold sm:text-2xl">
+            <a href="dashboard">My App</a>
+          </h1>
           <ul className="hidden items-center gap-6 md:flex lg:gap-8">
             <li>
               <a href="apply" className=" hover:text-blue-400">

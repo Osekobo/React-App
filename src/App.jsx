@@ -34,23 +34,23 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/help" element={<Help />} />
 
-        <Route element={<ProtectedRoute role="user" />}>
-          <Route element={<Layout />}>
-            <Route path="/home" element={<Homepage />} />
-            <Route path="/product" element={<Product />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/apply" element={<Apply />} />
-            <Route path="/application" element={<Application />} />
-            <Route path="/profile" element={<Profile />} />
-          </Route>
+        {/* <Route element={<ProtectedRoute role="user" />}> */}
+        <Route element={<Layout />}>
+          <Route path="/home" element={<Homepage />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/apply" element={<Apply />} />
+          <Route path="/application" element={<Application />} />
+          <Route path="/profile" element={<Profile />} />
         </Route>
+        {/* </Route> */}
 
-        <Route element={<ProtectedRoute role="admin" />}>
-          <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/admin/applications" element={<Application />} />
-          <Route path="/admin/students" element={<Students />} />
-          <Route path="/admin/reports" element={<Reports />} />
-        </Route>
+        {/* <Route element={<ProtectedRoute role="admin" />}> */}
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/applications" element={<Application />} />
+        <Route path="/admin/students" element={<Students />} />
+        <Route path="/admin/reports" element={<Reports />} />
+        {/* </Route> */}
 
         {/* Anything else */}
         <Route path="*" element={<Navigate to="/login" replace />} />
@@ -58,5 +58,3 @@ export default function App() {
     </BrowserRouter>
   );
 }
-
-
